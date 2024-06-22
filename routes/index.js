@@ -81,7 +81,9 @@ router.get('/orderDetail', (req, res) => {
 router.get('/admin/product-new', (req, res) => {
     return res.sendFile(path.join(__dirname + "/../src/FE/Admin/product/product-new.html"));
 });
-
+router.get('/newpassword', (req,res) => {
+    return res.sendFile(path.join(__dirname + "/../src/FE/Login/new_password.html"));
+})
 
 
 module.exports = router;

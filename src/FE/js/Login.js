@@ -32,3 +32,10 @@ onSignupButton.addEventListener('click', () => {
     // 회원가입 페이지로 이동
     window.location.href = '../Signup/Signup.html';
 });
+
+/** 비밀번호 찾기 버튼 클릭 시 비밀번호 찾기 페이지로 이동 */
+const findButton = document.querySelector('.find-button');
+findButton.addEventListener('click', () => {
+    // 비밀번호 찾기 페이지로 이동
+    window.location.href = '../Login/find_password.html';
+});
