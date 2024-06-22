@@ -86,6 +86,9 @@ body {
     margin-bottom: 20px;
 }
 
+
+.find,
+.find-button,
 .checkbox label {
     display: flex;
     align-items: center;
@@ -99,12 +102,18 @@ body {
     font-size: 14px;
 }
 
+.find,
+.find-signup,
+.find-button,
 .login-signup {
     display: flex;
     flex-direction: column; /* 세로로 나열 */
     gap: 5px; /* 아이템 간격 */
 }
 
+.change,
+.find,
+.find-button,
 .login-button,
 .signup-button {
     width: 100%;

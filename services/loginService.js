@@ -37,7 +37,7 @@ class LoginService {
         const text = `임시 비밀번호 : ${secret} \n 임시 비밀번호로 로그인 시 비밀번호를 변경하여야 합니다.`;
         const result = await sendEmail(email, subject, text);
         if(result === 1){
-            return {message: "임시 비밀번호가 정상적으로 발급되었습니다. 이메일을 확인해주세요."};
+            return {code: 200, message: "임시 비밀번호가 정상적으로 발급되었습니다. 이메일을 확인해주세요."};
         } else {
             const error = new Error();
             Object.assign(error,{code: 400, message: "임시 비밀번호가 발급되지 않았습니다."});
@@ -63,7 +63,7 @@ class LoginService {
         });
         // verify data 제거
         await Verify.deleteMany({data:user.email, code: code.PASSWORD});
-        return {message: "비밀번호가 정상적으로 변경되었습니다."};
+        return {code: 200, message: "비밀번호가 정상적으로 변경되었습니다."};
     }
 }
 
